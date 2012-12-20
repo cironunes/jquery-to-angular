@@ -1,0 +1,33 @@
+<div class="well">
+  <ul class="products">
+    <li class="product" ng-repeat="product in products | filter:searchText">
+      <div class="product-inner">
+        <img class="product-photo" ng-src="{{product.photo}}" alt="">
+        <strong class="product-name">{{product.name}}</strong>
+        <span class="product-price">{{product.price | currency}}</span>
+        <button class="btn btn-primary" ng-click="addToCart(product.id)">Buy!</button>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<table class="table table-bordered table-rounded table-stripped">
+  <thead>
+    <th>Item</th>
+    <th>Quantidade</th>
+    <th>Valor unitário</th>
+    <th>Valor total</th>
+  </thead>
+  <tfoot>
+    <td colspan="3">Total</td>
+    <td>{{total | currency}}</td>
+  </tfoot>
+  <tbody>
+    <tr ng-repeat="item in cart">
+      <td>{{item.name}}</td>
+      <td>{{item.quantity}}</td>
+      <td>{{item.price | currency}}</td>
+      <td>{{item.quantity * item.price | currency}}</td>
+    </tr>
+  </tbody>
+</table>

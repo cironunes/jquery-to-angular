@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Passo a passo do jQuery ao Angular</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/print.css" media="print">
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		.l-centralized-media img {
+			display: block;
+			margin: 100px auto 0;
+		}
+		.ps {
+			font-size: 19px;
+		}
+		input {
+			font-size: 15px;
+			padding: 10px;
+			border: 1px solid #999;
+		}
+		button {
+			font-size: 15px;
+		}
+		#Cover h2 {
+			margin:115px 0 0;
+			text-align:center;
+			font-size: 60px;
+			}
+		#Cover .author {
+			font-size: 40px;
+		}
+		#Picture h2 {
+			color:#FFF;
+			}
+/*		.icons {
+			position: absolute; top: 20px; left: 100px;
+			background: url(pictures/cover.jpg) no-repeat;
+			display: block;
+			width: 165px;
+			height: 91px;
+		}*/
+		.shout h2.mini-shout {
+			font-size: 70px;
+		}
+		.slide h2.mini-title {
+			font-size: 32px;
+			margin-bottom: 5px;
+		}
+		.slide pre.mini-pre {
+			font-size: 16px;
+		}
+		.slide pre.mini-pre code {
+			line-height: 32px;
+		}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Passo a passo do jQuery ao Angular</h1>
+		<p><a href="http://twitter.com/cironunesdev">Ciro Nunes</a>, <a href="http://kanui.com.br">Kanui</a></p>
+	</header>
+	<!-- cover -->
+	<section class="slide" id="Cover"><div>
+		<h2>Passo a passo <br> do jQuery ao Angular</h2>
+		<h2 class="author">Ciro Nunes</h2>
+	</div></section>
+	<!-- /cover -->
+
+	<!-- about jQuery -->
+	<section class="slide shout"><div>
+		<h2 class="mini-shout">Vamos falar de jQuery</h2>
+	</div></section>
+	<!-- /about jQuery -->
+
+	<!-- jQuery powers -->
+	<section class="slide"><div>
+		<h2>Superpoderes do jQuery</h2>
+		<ul>
+			<li>Lidar com o DOM</li>
+			<li>Manipular eventos</li>
+			<li>Animações</li>
+			<li>AJAX</li>
+		</ul>
+	</div></section>
+	<!-- /jQuery powers -->
+
+	<!-- jQuery DOM sample -->
+	<section class="slide"><div>
+		<h2>Lidando com o DOM</h2>
+		<pre>
+			<code><mark>$('input')</mark>.on(<mark class="important">'keyup'</mark>, function() {</code>
+			<code>	$('p').<mark>html</mark>('Olá, ' + $(this).val());</code>
+			<code>});</code>
+		</pre>
+	</div></section>
+	<!-- /jQuery DOM sample -->
+
+	<!-- jQuery DOM sample -->
+	<section class="slide" id="dom-sample"><div>
+		<h2>Lidando com o DOM</h2>
+		<input type="text" placeholder="Digite seu nome">
+		<p>Olá</p>
+	</div></section>
+	<!-- /jQuery DOM sample -->
+
+	<!-- jQuery animation sample -->
+	<section class="slide"><div>
+		<h2>Animando</h2>
+		<pre>
+			<code>$('button').on('click', function() {</code>
+			<code>	$('p').<mark>fadeToggle</mark>();</code>
+			<code>});</code>
+		</pre>
+	</div></section>
+	<!-- /jQuery animation sample -->
+
+	<!-- jQuery animation sample -->
+	<section class="slide" id="animation-sample"><div>
+		<h2>Animando</h2>
+		<button>Click me :)</button>
+		<p><a href="#">Animações</a> com jQuery são simples e divertidas</p>
+	</div></section>
+	<!-- /jQuery animation sample -->
+
+
+	<!-- jQuery AJAX sample -->
+	<section class="slide"><div>
+		<h2>AJAX</h2>
+		<pre>
+			<code>$.<mark>ajax</mark>({</code>
+			<code>	type: 'get',</code>
+			<code>	url: 'http://search.twitter.com/search.json',</code>
+			<code>	data: {q: '#riojs'},</code>
+			<code>	dataType: 'jsonp',</code>
+			<code>	success: 'function(data) {...}'</code>
+			<code>});</code>
+		</pre>
+	</div></section>
+	<!-- /jQuery AJAX sample -->
+
+	<!-- jQuery AJAX sample -->
+	<section class="slide" id="ajax-sample"><div>
+		<h2>AJAX</h2>
+		<ul></ul>
+	</div></section>
+	<!-- /jQuery AJAX sample -->
+
+	<!-- isso é tudo pessoal? -->
+	<section class="slide shout"><div>
+		<h2 class="mini-shout">Isso é tudo que precisamos?</h2>
+	</div></section>
+	<!-- /isso é tudo pessoal? -->
+
+	<!-- sites x apps -->
+	<section class="slide shout"><div>
+		<h2 class="mini-shout">O que vamos desenvolver?</h2>
+	</div></section>
+	<!-- /sites x apps -->
+
+	<!-- sites? -->
+	<section class="slide cover shout"><div>
+		<h2 class="mini-shout">Sites?</h2>
+		<img src="pictures/riojs.jpg" height="640" width="1024" alt="">
+	</div></section>
+	<!-- /sites? -->
+
+	<!-- apps -->
+	<section class="slide cover shout"><div>
+		<h2 class="mini-shout">ou Apps?</h2>
+		<img src="pictures/conversation-large.png" height="682" width="1069" alt="">
+	</div></section>
+	<!-- /apps -->
+
+	<!-- concepts -->
+	<section class="slide"><div>
+		<h2>Quando desenvolvemos <mark>&nbsp;apps&nbsp;</mark> nós:</h2>
+		<ul>
+			<li>Testamos</li>
+			<li>Refatoramos</li>
+			<li>Separamos responsabilidades</li>
+			<li>Usamos Design Patterns</li>
+			<li>Desacoplamos os módulos</li>
+			<li>DRY</li>
+		</ul>
+	</div></section>
+	<!-- /concepts -->
+
+	<!-- because -->
+	<section class="slide"><div>
+		<h2>Com isso nosso código fica mais:</h2>
+		<ul>
+			<li>Manutenível</li>
+			<li>Flexível</li>
+			<li>Testável</li>
+			<li>Desacoplado</li>
+		</ul>
+	</div></section>
+	<!-- /because -->
+
+	<!-- frameworks back-end -->
+	<!-- /frameworks back-end -->
+
+	<!-- angular -->
+	<section class="slide shout"><div>
+		<div class="l-centralized-media">
+			<img src="pictures/angular.jpg" alt="">
+		</div>
+	</section></div>
+	<!-- /angular -->
+
+	<!-- estrutura MVC -->
+	<section class="slide shout"><div>
+		<h2>Estrutura<br>MVC</h2>
+	</section></div>
+	<!-- /estrutura MVC -->
+
+	<!-- estrutura MVC -->
+	<section class="slide"><div>
+		<h2 class="mini-title">Model</h2>
+		<pre>
+			<code>&lt;input type="text" <mark>data-ng-model="name"</mark>&gt;</code>
+		</pre>
+		<h2 class="mini-title">View</h2>
+		<pre>
+			<code>&lt;p&gt; Olá, <mark>{{name}}</mark>&lt;p&gt;</code>
+		</pre>
+		<h2 class="mini-title">Controller</h2>
+		<pre>
+			<code>&lt;div <mark>data-ng-controller="HelloCtrl"</mark>&gt;&lt;div&gt;</code>
+			<code>function HelloCtrl(<mark class="important">$scope</mark>) { ... }</code>
+		</pre>
+	</div></section>
+	<!-- /estrutura MVC -->
+
+	<section class="slide"><div ng-app ng-controller="HelloCtrl">
+		<h2>Hello World Angular MVC</h2>
+		<input type="text" ng-model="name" placeholder="Digite seu nome">
+		<p>Olá, {{name}}</p>
+	</section></div>
+
+	<!-- data-bindings & directives -->
+	<section class="slide shout"><div>
+		<h2 class="mini-shout">Data-bindings &amp; Directives</h2>
+	</section></div>
+	<!-- /data-bindings & directives -->
+
+	<!-- data-bindings & directives -->
+	<section class="slide"><div>
+		<h2>Data-binding &amp; Directives</h2>
+		<ul>
+			<li>Data-binding via <mark>&nbsp;{{}}&nbsp;</mark> ou <mark>&nbsp;ng-bind&nbsp;</mark></li>
+			<li>Estruturas para repetir/esconder fragmentos do DOM</li>
+			<li>Suporte a validação de formulários</li>
+			<li>Componentes HTML customizáveis e reutilizáveis</li>
+		</ul>
+	</section></div>
+	<!-- /data-bindings & directives -->
+
+	<!-- data-bindings & directives -->
+	<section class="slide"><div>
+		<h2>Data-binding &amp; Directives</h2>
+		<pre>
+			<code>function HelloCtrl(<mark class="important">$scope</mark>) {</code>
+			<code>	<mark>$scope.products</mark> = [</code>
+			<code>		{name: 'Batarang', price: 50000},</code>
+			<code>		{name: 'Cloak', price: 20000}</code>
+			<code>	];</code>
+			<code>}</code>
+		</pre>
+	</div></section>
+	<!-- /data-bindings & directives -->
+
+	<!-- data-bindings & directives -->
+	<section class="slide"><div>
+		<h2>Data-binding &amp; Directives</h2>
+		<pre>
+			<code>&lt;ul&gt;</code>
+			<code>	&lt;li  <mark>ng-repeat="product in products"</mark>&gt;</code>
+			<code>		<mark class="important">{{product.name}}</mark></code>
+			<code>	&lt;/li&gt;</code>
+			<code>&lt;/ul&gt;</code>
+		</pre>
+	</div></section>
+	<!-- /data-bindings & directives -->
+
+		<!-- data-bindings & directives -->
+	<section class="slide"><div>
+		<h2>Data-binding &amp; Directives</h2>
+		<img src="pictures/scope.png" alt="">
+	</div></section>
+	<!-- /data-bindings & directives -->
+
+	<!-- tests -->
+	<section class="slide shout"><div>
+		<h2 class="mini-shout">Testes</h2>
+	</section></div>
+	<!-- /tests -->
+
+	<!-- tests -->
+	<section class="slide"><div>
+		<h2>Testes</h2>
+		<pre class="mini-pre">
+			<code>describe(<mark>'HelloCtrl'</mark>, function() {</code>
+			<code>	var helloCtrl,  <mark class="important">scope</mark>;</code>
+			<code>	beforeEach(inject(function($controller) {</code>
+			<code>		<mark class="important">scope</mark> = {};</code>
+			<code>		HelloCtrl = $controller( <mark>'HelloCtrl'</mark>, {</code>
+			<code>			$scope:  <mark class="important">scope</mark></code>
+			<code>		});</code>
+			<code>	}));</code>
+			<code>	it('should have 3 items', function() {</code>
+			<code>		expect( <mark class="important">scope</mark>.items.length).toBe(3);</code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+	</section></div>
+	<!-- /tests -->
+
+	<!-- tests -->
+	<section class="slide"><div>
+		<h2>Testes</h2>
+		<pre>
+				<code>function HelloCtrl(<mark class="important">$scope</mark>) {</code>
+				<code>	$scope.items = [1, 2, 3];</code>
+				<code>}</code>
+		</pre>
+	</section></div>
+	<!-- /tests -->
+
+	<!-- DI -->
+	<!-- /DI -->
+
+	<!-- end-to-end -->
+	<section class="slide"><div>
+		<h2>E muito mais...</h2>
+		<ul>
+			<li>Routes</li>
+			<li>Services</li>
+			<li>Resource provider</li>
+			<li>Dependency injection</li>
+			<li>e-2-e testing</li>
+			<li>Deferred ($q)</li>
+		</ul>
+	</section></div>
+	<!-- /end-to-end -->
+
+	<section class="slide shout"><div>
+		<h2 class="mini-shout">Demo</h2>
+	</section></div>
+
+	<section class="slide shout"><div>
+		<h2 class="mini-shout">Perguntas?</h2>
+	</section></div>
+
+	<section class="slide"><div>
+		<h2>Passo a passo do jQuery ao Angular</h2>
+		<p>Ciro Nunes, Kanui</p>
+		<ul>
+			<li><a href="http://twitter.com/cironunesdev">@cironunesdev</a></li>
+			<li><a href="http://github.com/cironunes">github.com/cironunes</a></li>
+			<li><a href="mailto:ciroanunes@gmail.com">ciroanunes@gmail.com</a></li>
+		</ul>
+		<p class="ps">Todo desta palestra código está disponível no github: <a href="https://github.com/cironunes/jquery-to-angular">github.com/cironunes/jquery-to-angular</a></p>
+	</div></section>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="js/libs/jquery.js"></script>
+	<script src="js/libs/angular.js"></script>
+	<script>
+		function HelloCtrl($scope) {}
+	</script>
+	<script src="js/samples.js"></script>
+	<script src="shower/shower.js"></script>
+	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>

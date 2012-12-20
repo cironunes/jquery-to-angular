@@ -1,0 +1,35 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+.products {
+  display: table;
+  width: 100%;
+  list-style: none;
+  margin-left: 0;
+}
+.product {
+  display: table-cell;
+  text-align: center;
+}
+.product-photo {
+  margin: 0 auto;
+}
+
+.product-photo,
+.product-name,
+.product-price {
+  display: block;
+}
+
+.navbar input[type="text"] {
+  margin: 5px 0 0;
+}
+
+.product-name {
+  color: #555;
+  text-transform: uppercase;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0 10px;
+}
