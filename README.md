@@ -12,7 +12,7 @@ e acesse em <http://localhost:8000/>
 
 ###Para brincar com a app demo:
 
-Vá até a pasta ```/samples/angular/```
+Vá até a pasta ```/samples/cart/```
 
 Inicie um servidor [Yeoman](http://yeoman.io/)
 
