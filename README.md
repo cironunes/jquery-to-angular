@@ -1,25 +1,36 @@
-# Shower presentation example
+# Palestra: Passo a passo do jQuery ao Angular
 
-Based on [shower](https://github.com/shower/shower) engine and [ribbon](https://github.com/shower/ribbon) theme.
+###Para visualizar os slides:
 
-To see Shower in action:
-
-- Open [shwr.me](http://shwr.me/)
-- Click any slide to enter presentation mode
-- Use arrow keys to navigate
-- Press `Esc` to exit presentation mode
-
-See more details in Shower [readme](https://github.com/shower/shower#readme). Follow [@shower_me](http://twitter.com/shower_me/) for support and updates. Use [Issues](https://github.com/shower/shower/issues) for sharing your ideas, bugs and feature requests.
-
-## Using template
-
-To get Shower template run following command:
+Inicie um servidor HTTP, recomendo usar o Python:
 
 ```
-git clone --recursive git@github.com:shower/template.git
+$ python -m SimpleHTTPServer
 ```
 
-Or you can just download [latest version](http://shwr.me/template.zip) as ZIP file.
+e acesse em <http://localhost:8000/>
 
----
-Licensed under [MIT License](http://en.wikipedia.org/wiki/MIT_License), see [license page](shower/wiki/MIT-License) for details.
+###Para brincar com a app demo:
+
+Vá até a pasta ```/samples/angular/```
+
+Inicie um servidor [Yeoman](http://yeoman.io/)
+
+```
+$ yeoman server
+```
+e ele já abre o browser para você :)
+
+###Para rodar os testes
+```
+$ yeoman test
+```
+
+##Dúvidas e/ou críticas
+Seu feedback é importantíssimo para nós. Caso não concorde e/ou não tenha entendido algo, sinta-se a vontade para questionar e perguntar.
+
+####Twitter
+[@cironunesdev](http://twitter.com/cironunesdev/)
+
+####E-mail
+[ciroanunes@gmail.com](mailto:ciroanunes@gmail.com)
